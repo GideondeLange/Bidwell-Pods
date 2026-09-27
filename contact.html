@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Bidwell Pods</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="index.html" class="brand">
+      <img src="img/logo-dark.png" alt="Bidwell Pods" class="brand-logo">
+    </a>
+    <nav class="primary">
+      <a href="index.html">Home</a>
+      <a href="pods.html">Pods</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-amber btn-sm">Get a Quote</a>
+      <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="index.html">Home</a>
+  <a href="pods.html">Pods</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-solid btn-block">Get a Quote</a>
+</div>
+
+<main>
+
+  <section class="band-ink" style="padding-block:clamp(3rem,6vw,4.5rem);">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--amber);">Get In Touch</span>
+      <h1 style="font-size:clamp(2.2rem,4.4vw,3.4rem); margin-top:.7rem; max-width:20ch;">Ready to invest in your own pod?</h1>
+      <p style="color:rgba(250,247,241,.75); max-width:56ch; margin-top:1rem;">Tell us about your site and what you need the space to do — we typically respond within 1 business day.</p>
+    </div>
+  </section>
+
+  <section class="band-paper">
+    <div class="wrap contact-grid">
+      <div class="contact-detail">
+        <div class="cd-item"><div class="cd-icon">&#128241;</div><div><h4>Phone &amp; WhatsApp</h4><p><a href="tel:+27824103862">+27 82 410 3862</a><br><a href="https://wa.me/27824103862" target="_blank" rel="noopener">Message us on WhatsApp &rarr;</a></p></div></div>
+        <div class="cd-item"><div class="cd-icon">&#9993;</div><div><h4>Email</h4><p><a href="mailto:info@bidwellpods.co.za">info@bidwellpods.co.za</a></p></div></div>
+        <div class="cd-item"><div class="cd-icon">&#128205;</div><div><h4>Coverage</h4><p>Manufactured in Gauteng &middot; delivered nationwide across South Africa</p></div></div>
+        <div class="cd-item"><div class="cd-icon">&#128337;</div><div><h4>Hours</h4><p>Mon&ndash;Fri, from 7:30am</p></div></div>
+        <hr class="rule" style="margin:.5rem 0;">
+        <p class="map-note">Prefer to talk it through first? WhatsApp is the fastest way to reach us — tap the button in the corner of any page.</p>
+      </div>
+
+      <div class="form-card">
+        <form id="quoteForm">
+          <div class="form-grid">
+            <div class="full"><label for="f-name">Your Name</label><input id="f-name" name="name" type="text" required></div>
+            <div><label for="f-email">Email Address</label><input id="f-email" name="email" type="email" required></div>
+            <div><label for="f-phone">Phone Number (optional)</label><input id="f-phone" name="phone" type="tel"></div>
+            <div class="full"><label for="f-service">Pod / Service Interested In</label>
+              <select id="f-service" name="service">
+                <option>Not sure yet — general enquiry</option>
+                <option>3 Bedroom</option>
+                <option>Pod 2</option>
+                <option>Pod 3</option>
+                <option>Pod 4</option>
+                <option>Concrete Roof Top Pod</option>
+                <option>Insulated Cement Panel Housing</option>
+                <option>Backyard Entertainment Pod</option>
+                <option>Backyard Office / Storage Pod</option>
+                <option>Guard House</option>
+                <option>Coffee Shop</option>
+                <option>Financing Options</option>
+              </select>
+            </div>
+            <div class="full"><label for="f-message">Your Message</label><textarea id="f-message" name="message" required placeholder="Tell us about your site, budget and timeline..."></textarea></div>
+          </div>
+          <div class="form-foot">
+            <button type="submit" class="btn btn-amber">Send Message</button>
+            <span class="form-note">Opens your email app, addressed to info@bidwellpods.co.za</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="img/logo-light.png" alt="Bidwell Pods" class="brand-logo footer-logo">
+        <p>Steel-framed, timber-finished accommodation pods, designed and built in South Africa.</p>
+      </div>
+      <div class="foot-col"><h5>Explore</h5>
+        <a href="index.html">Home</a><a href="pods.html">Pods &amp; Pricing</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+      </div>
+      <div class="foot-col"><h5>Contact</h5>
+        <a href="tel:+27824103862">+27 82 410 3862</a><a href="mailto:info@bidwellpods.co.za">info@bidwellpods.co.za</a><a href="https://wa.me/27824103862" target="_blank" rel="noopener">WhatsApp Us</a>
+      </div>
+      <div class="foot-col foot-newsletter"><h5>Stay Updated</h5>
+        <form id="newsletterForm">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-outline-light btn-sm btn-block">Sign Up</button>
+        </form>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year"></span> Bidwell Pods. All rights reserved.</span>
+      <span>Prices exclude VAT. Custom design and sizes available on every model.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/27824103862" target="_blank" rel="noopener" aria-label="WhatsApp Bidwell Pods">
+  <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.34.64 4.53 1.75 6.4L4 29l7.8-1.7A11.9 11.9 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3Z" fill="#fff"/><path d="M22.4 18.3c-.35-.17-2.07-1.02-2.4-1.14-.32-.12-.55-.17-.79.17-.23.35-.9 1.14-1.1 1.37-.2.23-.4.26-.76.09-.35-.17-1.47-.54-2.8-1.72-1.04-.92-1.74-2.06-1.94-2.4-.2-.35-.02-.54.15-.71.16-.16.35-.4.52-.61.17-.2.23-.35.35-.58.12-.23.06-.43-.03-.6-.09-.17-.79-1.9-1.08-2.6-.28-.68-.57-.59-.79-.6h-.68c-.23 0-.6.09-.92.43-.32.35-1.2 1.17-1.2 2.86s1.23 3.32 1.4 3.55c.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.07-.85 2.36-1.66.29-.82.29-1.52.2-1.66-.08-.15-.31-.23-.66-.4Z" fill="#25D366"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
