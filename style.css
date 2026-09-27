@@ -243,6 +243,16 @@ textarea{resize:vertical; min-height:110px;}
 .form-foot{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-top:.4rem;}
 .form-note{font-size:.8rem; color:var(--muted);}
 .map-note{font-size:.85rem; color:var(--muted); font-style:italic;}
+.form-error{margin:1rem 0 0; font-size:.85rem; color:#b3392c;}
+.hp-field{position:absolute; left:-9999px; width:1px; height:1px; min-width:0; min-height:0; opacity:0; pointer-events:none;}
+.btn[disabled]{opacity:.6; cursor:not-allowed;}
+.form-success{display:flex; flex-direction:column; align-items:flex-start; gap:.9rem; text-align:left;}
+.form-success-icon{
+  width:44px; height:44px; border-radius:50%; background:var(--ink); color:var(--sand);
+  display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex:none;
+}
+.form-success h3{font-size:1.3rem;}
+.form-success p{color:var(--muted); font-size:.95rem;}
 
 /* ---------- FOOTER ---------- */
 footer{background:var(--ink); color:var(--paper); padding-block:3rem 1.6rem; border-top:3px solid var(--sand);}

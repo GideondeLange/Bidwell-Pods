@@ -41,18 +41,50 @@
 
     var qf = document.getElementById('quoteForm');
     if (qf) {
+      var qfBtn = qf.querySelector('button[type="submit"]');
+      var qfBtnText = qfBtn ? qfBtn.textContent : 'Send Message';
+      var qfError = document.getElementById('formError');
+      var formCard = document.getElementById('formCard');
+      var formSuccess = document.getElementById('formSuccess');
+      var resetBtn = document.getElementById('formResetBtn');
+
       qf.addEventListener('submit', function (e) {
         e.preventDefault();
-        var f = e.target;
-        var subject = 'Quote Request: ' + (f.service ? f.service.value : 'Bidwell Pods');
-        var body =
-          'Name: ' + f.name.value + '\n' +
-          'Email: ' + f.email.value + '\n' +
-          'Phone: ' + (f.phone.value || 'Not provided') + '\n' +
-          'Service: ' + (f.service ? f.service.value : '') + '\n\n' +
-          'Message:\n' + f.message.value;
-        window.location.href = 'mailto:info@bidwellpods.co.za?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        if (qfError) { qfError.hidden = true; qfError.textContent = ''; }
+        if (qfBtn) { qfBtn.disabled = true; qfBtn.textContent = 'Sending…'; }
+
+        fetch('contact-handler.php', { method: 'POST', body: new FormData(qf) })
+          .then(function (res) {
+            return res.json().catch(function () { return {}; }).then(function (data) {
+              return { ok: res.ok, data: data };
+            });
+          })
+          .then(function (result) {
+            if (result.ok && result.data && result.data.success) {
+              qf.reset();
+              if (formCard) formCard.hidden = true;
+              if (formSuccess) formSuccess.hidden = false;
+            } else {
+              throw new Error((result.data && result.data.message) || 'Something went wrong sending your message. Please try again or email us directly.');
+            }
+          })
+          .catch(function (err) {
+            if (qfError) {
+              qfError.textContent = err.message || 'Something went wrong sending your message. Please try again or email us directly.';
+              qfError.hidden = false;
+            }
+          })
+          .then(function () {
+            if (qfBtn) { qfBtn.disabled = false; qfBtn.textContent = qfBtnText; }
+          });
       });
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', function () {
+          if (formSuccess) formSuccess.hidden = true;
+          if (formCard) formCard.hidden = false;
+        });
+      }
     }
 
     var nf = document.getElementById('newsletterForm');
