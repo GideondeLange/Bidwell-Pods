@@ -1,6 +1,6 @@
 /* Shared site behaviour for Bidwell Pods */
 (function () {
-  var WA_NUMBER = '+27824103862';
+  var WA_NUMBER = '+27828517667';
 
   document.addEventListener('DOMContentLoaded', function () {
     var burger = document.getElementById('burgerBtn');

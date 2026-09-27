@@ -54,7 +54,7 @@
 
     overlay.querySelector('.modal-close').addEventListener('click', close);
     var wa = overlay.querySelector('.wa-enquire');
-    wa.href = 'https://wa.me/27824103862?text=' + encodeURIComponent("Hi, I'm interested in the " + p.name + " (from " + p.price + "). Please send me more details.");
+    wa.href = 'https://wa.me/27828517667?text=' + encodeURIComponent("Hi, I'm interested in the " + p.name + " (from " + p.price + "). Please send me more details.");
     wa.target = '_blank';
     wa.rel = 'noopener';
   }
