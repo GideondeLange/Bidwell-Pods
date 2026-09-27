@@ -15,6 +15,21 @@
       });
     }
 
+    if ('IntersectionObserver' in window) {
+      var revealEls = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+      revealEls.forEach(function (el) { observer.observe(el); });
+    } else {
+      document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in-view'); });
+    }
+
     document.querySelectorAll('.wa-enquire').forEach(function (a) {
       var msg = a.getAttribute('data-wa') || 'your pods';
       a.href = 'https://wa.me/' + WA_NUMBER.replace('+', '') + '?text=' + encodeURIComponent(
